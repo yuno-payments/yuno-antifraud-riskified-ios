@@ -9,10 +9,10 @@ let package = Package(
     products: [
         .library(
             name: "YunoAntifraudRiskified",
-            targets: ["YunoAntifraudRiskified", "RiskifiedBeacon"])
+            targets: ["YunoAntifraudRiskified", "RiskifiedWrapper"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Riskified/ios_sdk.git", from: "1.0.0")
+        .package(name: "RiskifiedBeacon", url: "https://github.com/Riskified/ios_sdk.git", from: "1.0.0")
     ],
     targets: [
         .binaryTarget(
@@ -20,6 +20,13 @@ let package = Package(
             url: "https://github.com/yuno-payments/yuno-antifraud-riskified-ios/releases/download/0.0.1/YunoAntifraudRiskified.xcframework.zip",
             checksum: "f7517a6521a1786ce45381b8ea86862aada8185205ee382b7f78a877f0358c27"
         ),
-        .binaryTarget(name: "RiskifiedBeacon", path: "Frameworks/RiskifiedBeacon.xcframework")
+       .target(
+            name: "RiskifiedWrapper",
+            dependencies: [ 
+                .target(name: "YunoAntifraudRiskified"),
+                .product(name: "RiskifiedBeacon", package: "RiskifiedBeacon")
+                ],
+            path: "RiskifiedWrapper"
+        )
     ]
 )
