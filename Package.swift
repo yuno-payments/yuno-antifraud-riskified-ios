@@ -18,7 +18,7 @@ let package = Package(
         .binaryTarget(
             name: "YunoAntifraudRiskified",
             url: "https://github.com/yuno-payments/yuno-antifraud-riskified-ios/releases/download/0.0.3/YunoAntifraudRiskified.xcframework.zip",
-            checksum: "f7517a6521a1786ce45381b8ea86862aada8185205ee382b7f78a877f0358c27"
+            checksum: "5e0d504a70ba5546cd5a207646019c1e30d7d2940bab748763c082593919492c"
         ),
        .target(
             name: "RiskifiedWrapper",
