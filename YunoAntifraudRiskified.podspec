@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platform              = :ios, '13.0'
 
   s.requires_arc          = true
-  s.dependency 'RiskifiedBeacon', '~> 1.3.3'
+  s.dependency 'RiskifiedBeacon', '~> 1.3.2'
   
   s.vendored_frameworks = 'YunoAntifraudRiskified.xcframework'
 
