@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'YunoAntifraudRisquified'
+  s.name             = 'YunoAntifraudRiskified'
   s.version          = '0.0.3'
   s.summary          = 'Risquified integration to YunoSDK.'
 
