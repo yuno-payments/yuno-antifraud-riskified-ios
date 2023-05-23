@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'YunoAntifraudRisquified'
+  s.name             = 'YunoAntifraudRiskified'
   s.version          = '0.0.3'
   s.summary          = 'Risquified integration to YunoSDK.'
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platform              = :ios, '13.0'
 
   s.requires_arc          = true
-  s.dependency 'RiskifiedBeacon', '~> 1.2.7'
+  s.dependency 'RiskifiedBeaconXCFramework', '~> 1.3.2'
   
   s.vendored_frameworks = 'YunoAntifraudRiskified.xcframework'
 
